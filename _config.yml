@@ -73,7 +73,7 @@ nav_sort: case_insensitive # default, equivalent to nil
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "2017-2020 Rodrigo Chang. Juan Carlos Castañeda. El contenido de este proyecto no representa la postura u opiniones del Banco de Guatemala."
+footer_content: "2017-2020 Juan Carlos Castañeda. Oscar Solís. Rodrigo Chang. El contenido de este trabajo de investigación es responsabilidad exclusiva de sus autores y no necesariamente representa la postura institucional del Banco de Guatemala."
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter

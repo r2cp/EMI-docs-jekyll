@@ -25,22 +25,25 @@ Por ejemplo, si la tendencia estocástica de la inflación (en la forma de una c
 En cambio, si la referida tendencia estocástica es aditiva, entonces se preserva la continuidad en dicha tendencia estocástica cuando la inflación intermensual cambia de signo.
 
 En particular, se propone el modelo siguiente:
-> $$ z_t = x_t + y_t $$
-> en donde $$z_t$$ representa la variación intermensual del IPC en $t$, $x_t$ la variación intermensual del IPC en $t$ sin tendencia estocástica y $y_t$ es el componente aditivo de tendencia estocástica en $t$.
+> $$ z_t = x_t + y_t $$  
+
+en donde $$z_t$$ representa la variación intermensual del IPC en $$t$$, $x_t$ la variación intermensual del IPC en $$t$$ sin tendencia estocástica y $$y_t$$ es el componente aditivo de tendencia estocástica en $$t$$.
 
 El modelo para la tendencia estocástica aditiva es el de una caminata aleatoria:
 $$ y_t = y_{t-1} + \varepsilon_t, \quad y_0 = 0, \quad \varepsilon_t\sim N(0, \sigma_\varepsilon^2) $$
 
 ### Calibración de la varianza
 
-Para generar las series de tiempo correspondientes al parámetro poblacional y a las simulaciones muestrales, la variable $y_t$ tiene valor inicial cero y luego evoluciona de acuerdo con su ley de movimiento (caminata aleatoria).  Para este propósito, los valores de los choques estocásticos $t$ se extraen de una distribución normal con media cero y con varianza $\sigma_\varepsilon^2$.
+Para generar las series de tiempo correspondientes al parámetro poblacional y a las simulaciones muestrales, la variable $$y_t$$ tiene valor inicial cero y luego evoluciona de acuerdo con su ley de movimiento (caminata aleatoria).  Para este propósito, los valores de los choques estocásticos $$t$$ se extraen de una distribución normal con media cero y con varianza $$\sigma_\varepsilon^2$$.
 
-El valor de $\sigma_\varepsilon^2$ se obtiene a partir de los datos históricos observados de inflación de Guatemala, de la manera siguiente:
+El valor de $$\sigma_\varepsilon^2$$ se obtiene a partir de los datos históricos observados de inflación de Guatemala, de la manera siguiente:
 
 > $$\sigma_\varepsilon^2 = \text{Var}(\delta_t)$$
-> en donde  
+
+en donde  
 > $$\delta_t = \frac{1}{12} \sum_{j=1}^{12} \left(q_{t-j} - q_{t-j-1} \right)$$  
-> corresponde a la media móvil de 12 meses de las diferencias en las variaciones intermensuales del IPC $q_t$ del período $t$ en los datos históricos.
+
+corresponde a la media móvil de 12 meses de las diferencias en las variaciones intermensuales del IPC $$q_t$$ del período $$t$$ en los datos históricos.
 
 Al aplicar este proceso se obtiene la siguiente gráfica de variaciones intermensuales del IPC y sus medias móviles de 12 meses. Como se puede apreciar, la varianza es mucho menor para las medias móviles.  
 
@@ -58,7 +61,7 @@ Ahora se procederá a computar una señal de ruido blanco utilizando la varianza
 
 ![Ruido blanco](https://rafaelchp.github.io/EMI-docs/docs/calibracion-varianza/images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_155842.png)  
 
-Como se puede observar, la volatilidad de la señal de ruido blanco utilizando la varianza del período completo ($\text{Var}(\delta_t) = 0.0027$) es ligeramente menor a la volatilidad de la señal de ruido blanco que utiliza la varianza solamente de la base 2000 ($\text{Var}(\delta_t) = 0.0035$). Aunque, en apariencia, la diferencia de volatilidad no parece muy importante.
+Como se puede observar, la volatilidad de la señal de ruido blanco utilizando la varianza del período completo ($$\text{Var}(\delta_t) = 0.0027$$) es ligeramente menor a la volatilidad de la señal de ruido blanco que utiliza la varianza solamente de la base 2000 ($$\text{Var}(\delta_t) = 0.0035$$). Aunque, en apariencia, la diferencia de volatilidad no parece muy importante.
 
 A continuación se procederá a utilizar la señal de ruido blanco del período completo para computar las trayectorias paramétricas de inflación. Esto permitirá evaluar si la volatilidad calibrada a través de este procedimiento es adecuada, es decir, si permite que la evolución de la tendencia estocástica genere cambios significativos, pero no muy grandes, en la trayectoria de la inflación interanual.
 
