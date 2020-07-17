@@ -14,7 +14,7 @@ usemathjax: true
 En este repositorio se encuentra publicada la documentación respecto al proyecto de evaluación de medidas de inflación (EMI).
 {: .fs-6 .fw-300 }
 
-[Get started now](#introduccion){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Ver en GitHub](https://github.com/DIE-BANGUAT/EMI){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Introducción](#introduccion){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Ver en GitHub](https://github.com/DIE-BANGUAT/EMI){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 

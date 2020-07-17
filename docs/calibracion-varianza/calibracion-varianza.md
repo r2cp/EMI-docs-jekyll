@@ -44,7 +44,7 @@ El valor de $\sigma_\varepsilon^2$ se obtiene a partir de los datos históricos 
 
 Al aplicar este proceso se obtiene la siguiente gráfica de variaciones intermensuales del IPC y sus medias móviles de 12 meses. Como se puede apreciar, la varianza es mucho menor para las medias móviles.  
 
-![Variaciones intermensuales IPC](images/Calibraci%C3%B3n%20varianza%20RW_2020-07-14_154635.png)  
+![Variaciones intermensuales IPC](https://rafaelchp.github.io/EMI-docs/docs/calibracion-varianza/images/Calibraci%C3%B3n%20varianza%20RW_2020-07-14_154635.png)  
 
 En la siguiente tabla se presentan las estimaciones de varianza y desviación estándar de las variaciones intermensuales del IPC en las dos períodos del IPC (así como en el período completo). Los valores se muestran en puntos porcentuales para las desviaciones estándar. Se puede resaltar que los valores de desviación estándar sin suavizamiento de media móvil parecen ser muy grandes, y por lo tanto, inadecuados para utilizarse en bruto para el proceso de calibración de varianza de la tendencia de caminata aleatoria.
 
@@ -56,7 +56,7 @@ En la siguiente tabla se presentan las estimaciones de varianza y desviación es
 
 Ahora se procederá a computar una señal de ruido blanco utilizando la varianza de la media móvil de 12 meses de las variaciones intermensuales del IPC de la base 2000 y del período completo. A continuación, como ejemplo, se muestra una de las realizaciones:  
 
-![Ruido blanco](images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_155842.png)  
+![Ruido blanco](https://rafaelchp.github.io/EMI-docs/docs/calibracion-varianza/images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_155842.png)  
 
 Como se puede observar, la volatilidad de la señal de ruido blanco utilizando la varianza del período completo ($\text{Var}(\delta_t) = 0.0027$) es ligeramente menor a la volatilidad de la señal de ruido blanco que utiliza la varianza solamente de la base 2000 ($\text{Var}(\delta_t) = 0.0035$). Aunque, en apariencia, la diferencia de volatilidad no parece muy importante.
 
@@ -68,14 +68,14 @@ En esta sección se describe cómo quedan los parámetros poblacionales resultan
 
 En esta figura se aprecia las diferentes componentes de tendencia, los cuales son aahora aditivos en el proceso de cómputo de inflación paramétrica y en el remuestreo.  
 
-![Componentes tendencia](images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_161402.png)  
+![Componentes tendencia](https://rafaelchp.github.io/EMI-docs/docs/calibracion-varianza/images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_161402.png)  
 
 Como referencia, se muestran las trayectorias de inflación paramétrica sin tendencia.  
 
-![Trayectorias paramétricas sin tendencia](images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_160221.png)  
+![Trayectorias paramétricas sin tendencia](https://rafaelchp.github.io/EMI-docs/docs/calibracion-varianza/images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_160221.png)  
 
 Se muestran las trayectorias de inflación paramétrica utilizando la componente aditiva de tendencia de caminata aleatoria que se muestra en color morado en la figura anterior de componentes de tendencia.  
 
-![Trayectorias paramétricas tendencia aditiva](images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_160236.png)  
+![Trayectorias paramétricas tendencia aditiva](https://rafaelchp.github.io/EMI-docs/docs/calibracion-varianza/images/Calibraci%C3%B3n%20varianza%20RW_2020-07-16_160236.png)  
 
 Como se observa, se obtienen trayectorias de inflación paramétrica con tendencia estocástica y moderada volatilidad, por lo que el método de calibración podría considerarse adecuadamente escalado para modelar la varianza del proceso de caminata aleatoria de la tendencia.  
